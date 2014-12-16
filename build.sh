@@ -33,7 +33,11 @@ sudo ln specpr dradtran
 #Compile specpr
 #sudo su
 cd $DIR/config
-source ./cshenv.linux64.gfortran
+source ./export.linux64.gfortran
+
+cd $DIR/src.lib 
+make
+
 cd $DIR/src.specpr
 make really_clean
 make
