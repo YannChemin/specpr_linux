@@ -4,7 +4,7 @@
 # note: in SSPPFLAGS, set TERMDELAY if you need extra delays by the
 # cpu for graphics terminal graphics.
 setenv SSPPFLAGS 'LINUX -INTEL  -XWIN '
-setenv SPECPR /src/local/specpr
+setenv SPECPR /usr/local/src/specpr
 setenv RANDRET 32767
 setenv SP_LOCAL /usr/local
 setenv SP_BIN securebin
@@ -15,10 +15,6 @@ setenv SP_BIN securebin
 ### does not work setenv LDLIBS '/usr/lib/libc.a -L/usr/X11R6/lib -lX11'
 setenv SP_LDFLAGS -L/usr/lib64
 setenv SP_LDLIBS '-L/usr/X11R6/lib -lX11'
-
-# pre RedHat 8:
-
-#setenv LDLIBS '-lX11 -lm'
 
 #
 # The following should be fine as is, except FFLAGS might need
@@ -37,7 +33,7 @@ setenv SP_LIB '${SPECPR}/lib'
 setenv F77 gfortran
 setenv CC 'cc'
 setenv AR 'ar'
-setenv RF 'ratfor77'
+setenv RF 'ratfor'
 setenv LD ld
 setenv YACC yacc
 setenv LEX  flex

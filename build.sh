@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+#Basic dependencies
+sudo apt-get install byacc flex gfortran -y
+
 #Please make sure you installed ratfor through apt-get / yum / etc.
 sudo apt-get install ratfor -y
 
@@ -21,11 +24,18 @@ sudo cp specprnt   /usr/local/bin
 sudo cp spedit     /usr/local/bin
 sudo cp spfind     /usr/local/bin
 
+#link needed stuff
 cd /usr/local/bin/
 sudo ln specpr dspecpr
 sudo ln specpr radtran
 sudo ln specpr dradtran
 
+#Compile specpr
+cd /usr/local/src/specpr/config
+source ./cshenv.linux64.gfortran
+cd /usr/local/src/specpr/src.specpr
+make really_clean
+make
 
 
 
