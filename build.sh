@@ -8,6 +8,7 @@ sudo apt-get install byacc flex gfortran -y
 
 #Please make sure you installed ratfor through apt-get / yum / etc.
 sudo apt-get install ratfor -y
+sudo ln -s /usr/bin/ratfor /usr/bin/ratfor77
 
 #Build required software
 cd $DIR/src.sspp
